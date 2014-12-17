@@ -1,12 +1,12 @@
-cars = 100
-space_in_a_car = 4.0
-drivers = 30
-passengers = 90
+cars = 100 #Number of cars
+space_in_a_car = 4.0 #Max Number of passengers on car
+drivers = 30 #Number of drivers
+passengers = 90 #Number of passengers
 
-cats_not_driven = cars - drivers
-cars_driven = drivers
-carpool_capacity = cars_driven * space_in_a_car
-average_passengers_per_car = passengers / cars_driven
+cats_not_driven = cars - drivers #Number of car which are no drivers
+cars_driven = drivers #Number of car which have drivers
+carpool_capacity = cars_driven * space_in_a_car #How many people can be transport today
+average_passengers_per_car = passengers / cars_driven #How many people can be transport by car
 
 puts "There are #{cars} cars available"
 puts "There are only #{drivers} drivers available"
