@@ -1,18 +1,18 @@
-my_name = 'Sardo'
-my_age = 20
-my_height = 142 #cm
-my_weight = 32 #kg
-my_eyes = 'Black'
-my_teeth = 'White'
-my_hair = 'Black'
+name = 'Sardo'
+age = 20
+height = 56 * 2.54 #inches
+weight = 75 * 0.45 #lbs to kg
+eyes = 'black'
+teeth = 'white'
+hair = 'black'
 
-puts "Let's talk about #{my_name}."
-puts "She's #{my_height} inches tall."
-puts "She's #{my_weight} pounds heavy."
+puts "Let's talk about %s" % name
+puts "She's %d cm tall." %height
+puts "She's %d kg heavy." %weight
 puts "Actually that's not too heavy."
-puts "she's got #{my_eyes} eys and #{my_hair} hair."
-puts "Her teeth are usually #{my_eyes} eyes and #{my_hair} hair."
-puts "Her teeth are usually #{my_teeth} depending on the coffee."
+puts "she's got %s eyes and %s hair." % [eyes,hair]
+puts "Her teeth are usually %s depending on the coffee." %teeth
 
 # this line is tricky, try to get it exactly right
-puts "If I add my age, my height, and my weight ,I get #{my_age + my_height + my_weight}."
+puts "If I add %d, %d, and %d I get %d." % [
+    age,height,weight,age + height + weight]
