@@ -13,14 +13,17 @@ puts "Here's your file: #{filename}"
 #Show file content by read()
 puts txt.read()
 
+txt.close()
+
 #Get filename again by user's input
 puts "Type the filename again:"
 print prompt
 file_again = STDIN.gets.chomp()
 
-##se File.open() to open the file by provided filename again
+#Use File.open() to open the file by provided filename again
 txt_again = File.open(file_again)
-
 
 #Show file content by read() again
 puts txt_again.read()
+
+txt_again.close()
