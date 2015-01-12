@@ -1,7 +1,7 @@
 def say_hello(my_name,age,game)
     puts "Hello, my name is #{my_name}, #{age} years old."
     puts "Now I am playing a game which call #{game}."
-    puts "I hope we can be a friend !"
+    puts "I hope we can be friends!"
     puts
     return my_name,age,game 
 end
