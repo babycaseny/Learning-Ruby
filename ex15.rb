@@ -1,29 +1,13 @@
-#Get the filename from user by ARGV.first
 filename = ARGV.first
 
-#Set prompt value
-prompt = ">"
+txt = open(filename)
 
-#Use File.open() to open the file by provided filename
-txt = File.open(filename)
+puts "Here's your file #{filename}:"
+print txt.read
 
-#Show filename
-puts "Here's your file: #{filename}"
+print "Type the filename again: "
+file_again = $stdin.gets.chomp
 
-#Show file content by read()
-puts txt.read()
+txt_again = open(file_again)
 
-txt.close()
-
-#Get filename again by user's input
-puts "Type the filename again:"
-print prompt
-file_again = STDIN.gets.chomp()
-
-#Use File.open() to open the file by provided filename again
-txt_again = File.open(file_again)
-
-#Show file content by read() again
-puts txt_again.read()
-
-txt_again.close()
+print txt_again.read

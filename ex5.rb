@@ -1,18 +1,19 @@
-name = 'Sardo'
-age = 20
-height = 56 * 2.54 #inches
-weight = 75 * 0.45 #lbs to kg
-eyes = 'black'
-teeth = 'white'
-hair = 'black'
+name = 'Zed A. Shaw'
+age = 35 # not a lie in 2009
+height = 74 # inches
+weight = 180 # lbs
+eyes = 'Blue'
+teeth = 'White'
+hair = 'Brown'
 
-puts "Let's talk about %s" % name
-puts "She's %d cm tall." %height
-puts "She's %d kg heavy." %weight
+puts "Let's talk about #{name}."
+puts "He's #{height} inches tall."
+puts "That's #{height / 38.96} m tall."
+puts "He's #{weight} pounds heavy."
+puts "That's #{weight / 2.2} kg heavy."
 puts "Actually that's not too heavy."
-puts "she's got %s eyes and %s hair." % [eyes,hair]
-puts "Her teeth are usually %s depending on the coffee." %teeth
+puts "He's got #{eyes} eyes and #{hair} hair."
+puts "His teeth are usually #{teeth} depending on the coffee."
 
 # this line is tricky, try to get it exactly right
-puts "If I add %d, %d, and %d I get %d." % [
-    age,height,weight,age + height + weight]
+puts "If I add #{age}, #{height}, and #{weight} I get #{age + height + weight}."

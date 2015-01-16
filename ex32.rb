@@ -1,39 +1,34 @@
-the_count = [1 ,2 ,3, 4, 5]
-fruits =['apples', 'oranges' , 'peers', 'apricots']
-change = [1, 'pennies' , 2, 'dimes', 3 , 'quarters']
+the_count = [1, 2, 3, 4, 5]
+fruits = ['apples', 'oranges', 'pears', 'apricots']
+change = [1, 'pennies', 2, 'dimes', 3, 'quarters']
 
-#the first kind of for-loop goes through an array
-
+# this first kind of for-loop goes through a list
+# in a more traditional style found in other languages
 for number in the_count
-    puts "This is count #{number}"
+  puts "This is count %d.2d." % number
 end
 
-#same as above, but using a block instead
+# same as above, but in a more Ruby style
+# this and the next one are the preferred 
+# way Ruby for-loops are written
 fruits.each do |fruit|
-    puts "A fruit of type #{fruit}"
+  puts "A fruit of type: #{fruit}"
 end
 
-#also we can go through mixed arrays too
-for i in change
-    puts "I got #{i}"
-end
+# also we can go through mixed lists too
+# note this is yet another style, exactly like above
+# but a different syntax (way to write it).
+change.each {|i| puts "I got #{i}" }
 
-#we can also build arrays, first start with an empty one
+# we can also build lists, first start with an empty one
 elements = []
 
-#then use a range object to do 0 to 5 counts
-#for i in (0..5)
-#puts "Adding #{i} to the list."
-#push is a function that arrays understand
-    
-elements.push(1)
-elements.push(2)
-elements.push(3)
-elements.push(4)
-elements.push(5)
-
-#now we can puts them out too
-for i in elements
-    puts "Element was: #{i}"
+# then use the range operator to do 0 to 5 counts
+(0..5).each do |i|
+  puts "adding #{i} to the list."
+  # pushes the i variable on the *end* of the list
+  elements.push(i)
 end
-    
+
+# now we can print them out too
+elements.each {|i| puts "Element was: #{i}" }
