@@ -89,10 +89,11 @@ stephy = Cat.new("Stephy")
 mary = Person.new("Mary")
 
 ## mary has-a little cat
-mary.pet = stephy
+mary.pets << stephy
 
 ## Question: How can we have a person having two pets?
 marylamb = Lamb.new("MaryLamb")
+mary.pets << mary
 
 ## Frank is-a Employee
 frank = Employee.new("Frank", 120_000)
