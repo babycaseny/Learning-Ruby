@@ -41,6 +41,7 @@ class Person
     @name = name
 
     ## Person may have many pets
+    ## Check http://stackoverflow.com/questions/28147568/how-to-give-a-ruby-class-more-than-one-of-same-attribute/28147682#28147682 for the discussion
     @pets = Array.new
   end
 
