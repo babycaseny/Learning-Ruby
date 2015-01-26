@@ -1,3 +1,7 @@
+## Please check:
+## http://learnrubythehardway.org/book/ex42.html
+## For details about original question.
+
 ## Animal is-a object look at the extra credit
 class Animal
 end
