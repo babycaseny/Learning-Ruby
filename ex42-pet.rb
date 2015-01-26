@@ -40,12 +40,13 @@ class Person
     ## every person has a name
     @name = name
 
-    ## Person has-a pet of some kind
-    @pet = nil ## initialized to have none
+    ## Person may have many pets
+    @pets = Array.new
   end
 
-  attr_accessor :pet ## We can access attributes of their pet via the person
+  attr_accessor :pets ## We can access attributes of their pets via the person
 end
+
 
 ## Employee is-a person
 class Employee < Person
