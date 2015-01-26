@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'mongrel'
+require 'mongrel' ## http://zh.wikipedia.org/wiki/%E6%B7%B7%E7%A8%AE%E7%8B%97
 
 class TestHandler < Mongrel::HttpHandler
 
