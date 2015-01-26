@@ -48,6 +48,7 @@ class Employee < Person
 
   def initialize(name, salary)
     ## using "super" to retrieve attributes of super-class
+    ## http://rubylearning.com/satishtalim/ruby_overriding_methods.html
     super(name)
     ## salary is an attribute only available to Employee
     @salary = salary
