@@ -93,13 +93,15 @@ mary.pets << stephy
 
 ## Question: How can we have a person having two pets?
 marylamb = Lamb.new("MaryLamb")
-mary.pets << mary
+mary.pets << marylamb
+
+puts mary.pets
 
 ## Frank is-a Employee
 frank = Employee.new("Frank", 120_000)
 
 ## Frank has-a pet called rover
-frank.pet = rover
+frank.pets = rover
 
 ## flipper is-a kind of fish
 flipper = Fish.new()
