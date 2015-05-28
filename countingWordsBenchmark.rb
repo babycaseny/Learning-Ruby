@@ -1,14 +1,21 @@
-#Resources
-require 'rubygems'
+# See also: https://github.com/mongodb/mongo-ruby-driver/wiki/Tutorial
+# Resources
+require 'rubygems'  # not necessary for Ruby 1.9
 require 'mongo'
 
+# Include Mongo so that the Mongo classes are available 
+# without having to specify the Mongo namespace.
 include Mongo
+
+# See: https://github.com/abitdodgy/words_counted
 gem 'words_counted'
 
-options = {:database => "db_name", :replica_set => 'replica_name', :auth_mech => :mongodb_cr, :connect => :replica_set, :user => 'some_user', :password => 'some_users_password'}
-client = Mongo::Client.new(["MW-GAMP103240:60001", "MW-GAMP103240:60001", "MW-GAMP103240:60001"], options)
+# A MongoClient instance represents a connection to MongoDB.
+mongo_client = MongoClient.new("MW-GAMP103240", 60001)
 
-db = Connection.new.db('benchmark')
+# Using a DB
+db = mongo_client.db('benchmark')
+# auth = db.authenticate(my_user_name, my_password)
 posts = db.collection('posts')
 
 charSet = 'AaĀāÁáǍǎÀàÄäǞǟÄ́ä́Ä̌ä̌Ä̀ä̀BbCcÇçČčĈĉDdĐđEeĒēÉéĚěÈèFfGgĜĝ' +
