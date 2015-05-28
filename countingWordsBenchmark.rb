@@ -11,11 +11,12 @@ include Mongo
 gem 'words_counted'
 
 # A MongoClient instance represents a connection to MongoDB.
-mongo_client = MongoClient.new("MW-GAMP103240", 60001)
-
+# mongo_client = MongoClient.new("MW-GAMP103240", 60001)
 # Using a DB
-db = mongo_client.db('benchmark')
+# db = mongo_client.db('benchmark')
 # auth = db.authenticate(my_user_name, my_password)
+db = Mongo::Client.new('mongodb://MW-GAMP103240:60001/benchmark')
+
 posts = db.collection('posts')
 
 charSet = 'AaĀāÁáǍǎÀàÄäǞǟÄ́ä́Ä̌ä̌Ä̀ä̀BbCcÇçČčĈĉDdĐđEeĒēÉéĚěÈèFfGgĜĝ' +
