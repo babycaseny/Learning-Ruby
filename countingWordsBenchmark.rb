@@ -9,26 +9,23 @@ def wordcount(value)
     value.split(/\s+/).length
 end
 
+# def str_word_count(line, num, set)
+#    arr = line.split(" ")
+#    return arr.count
+#  end
+
 charSet = 'AaĀāÁáǍǎÀàÄäǞǟÄ́ä́Ä̌ä̌Ä̀ä̀BbCcÇçČčĈĉDdĐđEeĒēÉéĚěÈèFfGgĜĝ' +
 	  'HhĤĥIiĪīÍíǏǐÌìJjKkLlMmM̄m̄ḾḿM̌m̌M̀m̀NnN̄n̄ŃńŇňǸǹŊŋŊ̄ŋ̄' +
 	  'Ŋ́ŋ́Ŋ̌ŋ̌Ŋ̀ŋ̀OoŌōÓóǑǒÒòÖöȪȫÖ́ö́Ö̌ö̌Ö̀ö̀PpQqRrŘřSsŠšŜŝTtŦŧ' +
 	  'UuŪūÚúǓǔÙùÜüǕǖǗǘǙǚǛǜVvWwXxYyZzŽžẐẑ0123456789'
 
 filename = ARGV.first
-
-hFile = File.open(filename)
-
 puts "Nei supplaied fayl: #{filename}:"
-print hFile.read
 
 lines, words, chars = 0
-
-if (hFile)
-	freqData = []
-end
-
-while(!feof(hFile))
-	line = hFile.read
+freqData = []
+File.open(filename) do |hFile|
+	hFile.each_line do |line|
 	lines += 1
 	chars += strlen(line)
 	words = str_word_count(line, 1, charSet)
